@@ -67,6 +67,7 @@ export default {
     ...mapMutations(['changeCity'])
   },
   watch: {
+    // 监听字母变化
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0]

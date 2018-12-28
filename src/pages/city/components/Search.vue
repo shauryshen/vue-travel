@@ -47,6 +47,7 @@ export default {
   },
   watch: {
     keyword () {
+      // 函数节流，延迟100毫秒
       if (this.timer) {
         clearTimeout(this.timer)
       }

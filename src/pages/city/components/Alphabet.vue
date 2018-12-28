@@ -41,6 +41,7 @@ export default {
     this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
+    // 这个内容要传给兄弟组件List.vue，可以先传给City.vue
     handleLetterClick (e) {
       this.$emit('change', e.target.innerText)
     },
@@ -49,6 +50,7 @@ export default {
     },
     handleTouchMove (e) {
       if (this.touchStatus) {
+        // 函数节流，延迟16毫秒
         if (this.timer) {
           clearTimeout(this.timer)
         }

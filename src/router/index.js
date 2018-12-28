@@ -20,6 +20,7 @@ export default new Router({
     name: 'Detail',
     component: Detail
   }],
+  // 每次进一个路由，页面都在最顶端（各个页面滚动不受影响）
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   }
